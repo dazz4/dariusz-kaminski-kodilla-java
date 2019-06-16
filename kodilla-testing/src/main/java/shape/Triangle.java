@@ -1,20 +1,17 @@
 package shape;
 
 public class Triangle implements Shape {
-    int field;
+    int a;
+    int h;
 
-    public Triangle(int field) {
-        this.field = field;
+    public Triangle(int a, int h) {
+        this.a = a;
+        this.h = h;
     }
 
     @Override
     public double getField() {
-        return 0;
-    }
-
-    @Override
-    public String getShapeName() {
-        return null;
+        return (a * h)/2;
     }
 
 }

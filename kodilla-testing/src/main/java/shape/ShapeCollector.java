@@ -11,23 +11,36 @@ public class ShapeCollector {
     }
 
     public void addFigure(Shape shape) {
-
+        figures.add(shape);
     }
 
     public boolean removeFigure(Shape shape) {
-        return true;
+        boolean result = false;
+
+        if (figures.contains(shape)) {
+            figures.remove(shape);
+            result = true;
+        }
+
+        return result;
     }
 
     public Shape getFigure(int n) {
-        return null;
+        return figures.get(n);
     }
 
     public int getFiguresQuantity() {
-        return 100;
+        return figures.size();
     }
 
-    public ArrayList<Shape> showFigures() {
-        return null;
+    public String showFigures() {
+        String result = "";
+
+        for (Shape shape : figures) {
+            result += shape.getShapeName() + ": " + shape.getField() + "\n";
+        }
+
+        return result;
     }
 
 

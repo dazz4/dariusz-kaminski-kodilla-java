@@ -1,6 +1,9 @@
 package shape;
 
 public interface Shape {
-    String getShapeName();
     double getField();
+
+    default String getShapeName() {
+        return this.getClass().getSimpleName();
+    }
 }

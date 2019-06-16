@@ -1,20 +1,16 @@
 package shape;
 
 public class Circle implements Shape {
+    int radius;
 
-    int field;
-
-    public Circle(int field) {
-        this.field = field;
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
     @Override
     public double getField() {
-        return field;
+
+        return Math.PI * (radius * radius);
     }
 
-    @Override
-    public String getShapeName() {
-        return this.getClass().getName();
-    }
 }

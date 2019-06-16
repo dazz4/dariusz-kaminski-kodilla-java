@@ -1,21 +1,18 @@
 package shape;
 
 public class Square implements Shape {
+    int a;
+    int b;
 
-    int field;
-
-    public Square(int field) {
-        this.field = field;
+    public Square(int a, int b) {
+        this.a = a;
+        this.b = b;
     }
 
     @Override
     public double getField() {
-        return 0;
+        return a * b;
     }
 
-    @Override
-    public String getShapeName() {
-        return null;
-    }
 
 }

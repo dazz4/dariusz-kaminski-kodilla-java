@@ -1,8 +1,6 @@
 package forum.Shape;
 import org.junit.*;
-import shape.Circle;
-import shape.Shape;
-import shape.ShapeCollector;
+import shape.*;
 
 import java.util.ArrayList;
 
@@ -30,7 +28,7 @@ public class ShapeCollectorTestSuite {
     public void testAddFigure() {
         //Given
         ShapeCollector collector = new ShapeCollector();
-        Shape theFigure = new Circle(10);
+        Shape theFigure = new Square(10, 10);
 
         //When
         collector.addFigure(theFigure);
@@ -43,7 +41,7 @@ public class ShapeCollectorTestSuite {
     public void testGetFigure() {
         //Given
         ShapeCollector collector = new ShapeCollector();
-        Shape theFigure = new Circle(10);
+        Shape theFigure = new Square(10, 10);
         collector.addFigure(theFigure);
 
         //When
@@ -58,8 +56,7 @@ public class ShapeCollectorTestSuite {
     public void testRemoveFigureNotExisting() {
         //Given
         ShapeCollector collector = new ShapeCollector();
-        Shape theFigure = new Circle(10);
-        collector.addFigure(theFigure);
+        Shape theFigure = new Square(10, 10);
 
         //When
         boolean result = collector.removeFigure(theFigure);
@@ -72,7 +69,7 @@ public class ShapeCollectorTestSuite {
     public void testRemoveFigure() {
         //Given
         ShapeCollector collector = new ShapeCollector();
-        Shape theFigure = new Circle(10);
+        Shape theFigure = new Square(10, 10);
         collector.addFigure(theFigure);
 
         //When
@@ -87,14 +84,14 @@ public class ShapeCollectorTestSuite {
     public void testShowFigures() {
         //Given
         ShapeCollector collector = new ShapeCollector();
-        Shape theFigure = new Circle(10);
+        Shape theFigure = new Square(10, 10);
         collector.addFigure(theFigure);
 
         //When
-        ArrayList<Shape> retrievedList = collector.showFigures();
+        String result = "Square: 100.0\n";
 
         //Then
-        Assert.assertNotNull(retrievedList);
+        Assert.assertEquals(result, collector.showFigures());
     }
 
 }
