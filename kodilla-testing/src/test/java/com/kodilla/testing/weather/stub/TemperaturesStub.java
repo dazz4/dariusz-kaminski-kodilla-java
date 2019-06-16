@@ -1,7 +1,5 @@
 package com.kodilla.testing.weather.stub;
 
-import com.kodilla.testing.weather.stub.Temperatures;
-
 import java.util.HashMap;
 
 public class TemperaturesStub implements Temperatures {
