@@ -17,21 +17,21 @@ public class ForumUser {
     }
 
     public void addPost(String author, String postBody){
-        // do nothing
+        ForumPost thePost = new ForumPost(postBody, author);
+        posts.add(thePost);
     }
 
     public void addComment(ForumPost thePost, String author, String commentBody){
-        // do nothing
+        ForumComment theComment = new ForumComment(thePost, commentBody, author);
+        comments.add(theComment);
     }
 
     public int getPostsQuantity(){
-        // return 100 temporarily
-        return 100;
+        return posts.size();
     }
 
     public int getCommentsQuantity(){
-        // return 100 temporarily
-        return 100;
+        return comments.size();
     }
 
     public ForumPost getPost(int postNumber){
