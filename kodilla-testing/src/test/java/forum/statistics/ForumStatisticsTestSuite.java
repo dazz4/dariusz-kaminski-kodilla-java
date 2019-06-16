@@ -21,11 +21,9 @@ public class ForumStatisticsTestSuite {
         int totalComments = 100;
 
         List<String> usersNamesList = new ArrayList<>();
-        usersNamesList.add("User1");
-        usersNamesList.add("User2");
-        usersNamesList.add("User3");
-        usersNamesList.add("User4");
-        usersNamesList.add("User5");
+        for (int i = 0; i < 5; i++) {
+            usersNamesList.add("user");
+        }
 
         when(statistics.usersNames()).thenReturn(usersNamesList);
         when(statistics.postsCount()).thenReturn(totalPosts);
