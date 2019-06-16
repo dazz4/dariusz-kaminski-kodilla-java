@@ -45,4 +45,31 @@ public class ForumStatisticsTestSuite {
         Assert.assertEquals(10, averageCommentsPerPost );
     }
 
+    @Test
+    public void testCalculateAdvStatisticsIfZero() {
+        //Given
+        Statistics statistics = mock(Statistics.class);
+
+        int totalPosts = 0;
+        int totalComments = 0;
+        List<String> usersNamesList = new ArrayList<>();
+
+        when(statistics.usersNames()).thenReturn(usersNamesList);
+        when(statistics.postsCount()).thenReturn(totalPosts);
+        when(statistics.commentsCount()).thenReturn(totalComments);
+
+        ForumStatistics forumStatistics = new ForumStatistics();
+        forumStatistics.calculateAdvStatistics(statistics);
+
+        //When
+        int averagePostsPerUser = forumStatistics.getPostsPerUser();
+        int averageCommentsPerUser = forumStatistics.getCommentsPerUser();
+        int averageCommentsPerPost = forumStatistics.getCommentsPerPost();
+
+        //Then
+        Assert.assertEquals(0, averagePostsPerUser );
+        Assert.assertEquals(0, averageCommentsPerUser );
+        Assert.assertEquals(0, averageCommentsPerPost );
+    }
+
 }

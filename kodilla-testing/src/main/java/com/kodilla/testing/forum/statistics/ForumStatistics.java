@@ -15,9 +15,23 @@ public class ForumStatistics {
         this.totalPosts = statistics.postsCount();
         this.totalComments = statistics.commentsCount();
 
-        commentsPerPost = totalPosts / totalComments;
-        postsPerUser = totalPosts / totalUsers;
-        commentsPerUser = totalComments / totalUsers;
+        if(totalPosts !=0 && totalComments != 0 && totalPosts > totalComments) {
+            commentsPerPost = totalPosts / totalComments;
+        } else {
+            commentsPerPost = 0;
+        }
+
+        if (totalUsers != 0 && totalPosts != 0 && totalPosts > totalUsers) {
+            postsPerUser = totalPosts / totalUsers;
+        } else {
+            postsPerUser = 0;
+        }
+
+        if (totalUsers != 0 && totalComments != 0 && totalComments > totalUsers) {
+            commentsPerUser = totalComments / totalUsers;
+        } else {
+            commentsPerUser = 0;
+        }
 
     }
 
