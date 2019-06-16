@@ -1,8 +1,5 @@
-package forum.Shape;
+package shape;
 import org.junit.*;
-import shape.*;
-
-import java.util.ArrayList;
 
 public class ShapeCollectorTestSuite {
 
