@@ -1,5 +1,8 @@
-package shape;
+package com.kodilla.testing.shape;
 import org.junit.*;
+import shape.Shape;
+import shape.ShapeCollector;
+import shape.Square;
 
 public class ShapeCollectorTestSuite {
 
