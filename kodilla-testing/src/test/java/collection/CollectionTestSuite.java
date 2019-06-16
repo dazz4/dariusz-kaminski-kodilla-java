@@ -1,5 +1,4 @@
 package collection;
-
 import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.*;
 import java.util.ArrayList;
@@ -18,31 +17,37 @@ public class CollectionTestSuite {
 
     @Test
     public void testOddNumbersExterminatorEmptyList() {
-        OddNumbersExterminator exter = new OddNumbersExterminator();
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(2);
+        System.out.println("Testing if ArrayList is empty.");
+        //Given
+        OddNumbersExterminator ext = new OddNumbersExterminator();
+        ArrayList<Integer> oddAndEven = new ArrayList<>();
 
-        boolean isEmpty = exter.exterminate(numbers).isEmpty();
-        System.out.println("Is the list empty: " + isEmpty);
-        Assert.assertEquals(false, isEmpty);
+        //When
+        ArrayList<Integer> result = ext.exterminate(oddAndEven);
+
+        //Then
+        Assert.assertNull(result);
     }
 
     @Test
     public void testOddNumbersExterminatorNormalList() {
-        OddNumbersExterminator exter = new OddNumbersExterminator();
+        System.out.println("Testing if returned ArrayList consists only even numbers.");
+        //Given
+        OddNumbersExterminator ext = new OddNumbersExterminator();
+        ArrayList<Integer> oddAndEven = new ArrayList<>();
+        oddAndEven.add(1);
+        oddAndEven.add(2);
+        oddAndEven.add(3);
+        oddAndEven.add(4);
 
-        ArrayList<Integer> numbers = new ArrayList<>();
-        Random random = new Random();
+        ArrayList<Integer> onlyEven = new ArrayList<>();
+        onlyEven.add(2);
+        onlyEven.add(4);
 
-        for (int i = 0; i < 10; i++) {
-            numbers.add(random.nextInt(50));
-        }
+        //When
+        ArrayList<Integer> result = ext.exterminate(oddAndEven);
 
-        System.out.println("Testing the ArrayList");
-        for(Integer i : exter.exterminate(numbers)) {
-            int oddOrNot = i % 2;
-            Assert.assertEquals(0, oddOrNot);
-        }
-
+        //Then
+        Assert.assertEquals(onlyEven, result );
     }
 }

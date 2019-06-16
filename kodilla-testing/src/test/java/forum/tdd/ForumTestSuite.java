@@ -104,7 +104,8 @@ public class ForumTestSuite {
         ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
         ForumPost thePost = new ForumPost("Hello everyone, " +
                 "this is my first contribution here!", "mrsmith");
-        ForumComment newComment = new ForumComment(thePost, "mrsmith", "Thank you for all good words!");
+        ForumComment newComment = new ForumComment(thePost, "mrsmith",
+                "Thank you for all good words!");
 
         //When
         boolean result = forumUser.removeComment(newComment);
