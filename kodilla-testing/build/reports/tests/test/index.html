@@ -20,13 +20,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">8</div>
+<div class="counter">25</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">6</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -38,7 +38,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.015s</div>
+<div class="counter">0.101s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">25%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,45 +58,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Packages</a>
 </li>
 <li>
-<a href="#tab1">Packages</a>
-</li>
-<li>
-<a href="#tab2">Classes</a>
+<a href="#tab1">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<ul class="linkList">
-<li>
-<a href="classes/forum.tdd.ForumTestSuite.html">ForumTestSuite</a>.
-<a href="classes/forum.tdd.ForumTestSuite.html#testGetComment">testGetComment</a>
-</li>
-<li>
-<a href="classes/forum.tdd.ForumTestSuite.html">ForumTestSuite</a>.
-<a href="classes/forum.tdd.ForumTestSuite.html#testGetPost">testGetPost</a>
-</li>
-<li>
-<a href="classes/forum.tdd.ForumTestSuite.html">ForumTestSuite</a>.
-<a href="classes/forum.tdd.ForumTestSuite.html#testRemoveComment">testRemoveComment</a>
-</li>
-<li>
-<a href="classes/forum.tdd.ForumTestSuite.html">ForumTestSuite</a>.
-<a href="classes/forum.tdd.ForumTestSuite.html#testRemoveCommentNotExisting">testRemoveCommentNotExisting</a>
-</li>
-<li>
-<a href="classes/forum.tdd.ForumTestSuite.html">ForumTestSuite</a>.
-<a href="classes/forum.tdd.ForumTestSuite.html#testRemovePost">testRemovePost</a>
-</li>
-<li>
-<a href="classes/forum.tdd.ForumTestSuite.html">ForumTestSuite</a>.
-<a href="classes/forum.tdd.ForumTestSuite.html#testRemovePostNotExisting">testRemovePostNotExisting</a>
-</li>
-</ul>
-</div>
-<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -111,19 +79,89 @@
 </thead>
 <tbody>
 <tr>
-<td class="failures">
-<a href="packages/forum.tdd.html">forum.tdd</a>
+<td class="success">
+<a href="packages/com.kodilla.testing.collection.html">com.kodilla.testing.collection</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.003s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.forum.html">com.kodilla.testing.forum</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.forum.statistics.html">com.kodilla.testing.forum.statistics</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.079s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.forum.tdd.html">com.kodilla.testing.forum.tdd</a>
 </td>
 <td>8</td>
-<td>6</td>
 <td>0</td>
-<td>0.015s</td>
-<td class="failures">25%</td>
+<td>0</td>
+<td>0.003s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.library.html">com.kodilla.testing.library</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0.010s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.shape.html">com.kodilla.testing.shape</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.weather.mock.html">com.kodilla.testing.weather.mock</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.004s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/com.kodilla.testing.weather.stub.html">com.kodilla.testing.weather.stub</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0s</td>
+<td class="success">100%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -138,14 +176,84 @@
 </thead>
 <tbody>
 <tr>
-<td class="failures">
-<a href="classes/forum.tdd.ForumTestSuite.html">forum.tdd.ForumTestSuite</a>
+<td class="success">
+<a href="classes/com.kodilla.testing.collection.CollectionTestSuite.html">com.kodilla.testing.collection.CollectionTestSuite</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.003s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.forum.ForumTestSuite.html">com.kodilla.testing.forum.ForumTestSuite</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite.html">com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite</a>
+</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0.079s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.forum.tdd.ForumTestSuite.html">com.kodilla.testing.forum.tdd.ForumTestSuite</a>
 </td>
 <td>8</td>
-<td>6</td>
 <td>0</td>
-<td>0.015s</td>
-<td class="failures">25%</td>
+<td>0</td>
+<td>0.003s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.library.BookDirectoryTestSuite.html">com.kodilla.testing.library.BookDirectoryTestSuite</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0.010s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.shape.ShapeCollectorTestSuite.html">com.kodilla.testing.shape.ShapeCollectorTestSuite</a>
+</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.weather.mock.WeatherForecastTestSuite.html">com.kodilla.testing.weather.mock.WeatherForecastTestSuite</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.004s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="classes/com.kodilla.testing.weather.stub.WeatherForecastTestSuite.html">com.kodilla.testing.weather.stub.WeatherForecastTestSuite</a>
+</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0s</td>
+<td class="success">100%</td>
 </tr>
 </tbody>
 </table>
@@ -158,7 +266,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.4.1</a> at 15-Jun-2019 21:13:56</p>
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at 17-Jun-2019 08:10:01</p>
 </div>
 </div>
 </body>
