@@ -81,4 +81,19 @@ public class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
+
+    @Test
+    public void testListBooksInHandsOf() {
+        //Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        LibraryUser libraryUser = new LibraryUser("Darek", "Kaminski",
+                "108233222222");
+
+        //When
+        List<Book> resultListOf0Books = generateListOfNBooks(0);
+        List<Book> resultListOf1Book = generateListOfNBooks(1);
+        List<Book> resultListOf5Books = generateListOfNBooks(5);
+
+    }
 }
