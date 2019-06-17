@@ -15,9 +15,16 @@ public final class World {
         return listOfContinents;
     }
 
+//    public BigDecimal getPeopleQuantity() {
+//        return listOfContinents.stream()
+//                .map(continent -> continent.getPopulationOfCountries())
+//                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
+//    }
+
     public BigDecimal getPeopleQuantity() {
         return listOfContinents.stream()
-                .map(continent -> continent.getPopulationOfCountries())
+                .flatMap(continent -> continent.getCountryList().stream())
+                .map(country -> country.getPeopleQuantity())
                 .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
     }
 
