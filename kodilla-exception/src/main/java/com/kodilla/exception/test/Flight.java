@@ -29,7 +29,7 @@ public class Flight {
         flightMap.put("Gdansk", true);
         flightMap.put("Krakow", true);
 
-        if(flightMap.containsKey(arrivalAirport)) {
+        if(flightMap.containsKey(flight.getArrivalAirport())) {
 
             System.out.println("This airport exists on out system.");
 
