@@ -2,6 +2,9 @@ package com.kodilla.good.patterns.challenges;
 
 import java.time.LocalDate;
 
-interface ProductOrderService {
-    boolean orderProduct(User user, Product productName, LocalDate orderDate);
+public class ProductOrderService {
+    boolean orderProduct(User user, Product productName, LocalDate orderDate){
+        System.out.println("Processing the order...");
+        return true;
+    }
 }

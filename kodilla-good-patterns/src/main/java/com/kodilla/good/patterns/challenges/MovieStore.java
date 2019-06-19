@@ -36,7 +36,5 @@ class MovieStore {
 
     public static void main(String[] args) {
         getMovies();
-
     }
-
 }
