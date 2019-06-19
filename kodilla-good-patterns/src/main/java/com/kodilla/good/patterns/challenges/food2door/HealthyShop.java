@@ -1,13 +1,13 @@
-package com.kodilla.good.patterns.challenges.Food2Door;
+package com.kodilla.good.patterns.challenges.food2door;
 
 import java.time.LocalDate;
 import java.util.HashSet;
 
-public class GlutenFreeShop implements Shop {
+public class HealthyShop implements Shop {
     private String shopName;
     public HashSet<Product> productsList = new HashSet<>();
 
-    public GlutenFreeShop(String shopName) {
+    public HealthyShop(String shopName) {
         this.shopName = shopName;
     }
 
@@ -20,7 +20,7 @@ public class GlutenFreeShop implements Shop {
         for (Product p : order.getListOfProducts()) {
             if (productsList.contains(p)) {
                 System.out.println("Products available, sending order to " + shopName);
-                System.out.println("Your order will be delivered " + LocalDate.now().plusDays(1));
+                System.out.println("Your order will be delivered " + LocalDate.now().plusDays(5));
                 System.out.println(order.toString());
 
                 return true;

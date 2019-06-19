@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges.AllegroStore;
+package com.kodilla.good.patterns.challenges.allegrostore;
 
 public class Product {
 
