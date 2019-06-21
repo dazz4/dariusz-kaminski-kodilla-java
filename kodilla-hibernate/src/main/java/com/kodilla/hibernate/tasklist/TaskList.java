@@ -30,7 +30,6 @@ public class TaskList {
         this.id = id;
     }
 
-    @NotNull
     @Column(name = "LISTNAME")
     public String getListName() {
         return listName;
@@ -40,7 +39,6 @@ public class TaskList {
         this.listName = listName;
     }
 
-    @NotNull
     @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
