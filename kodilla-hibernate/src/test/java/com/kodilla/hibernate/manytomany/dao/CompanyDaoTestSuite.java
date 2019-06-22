@@ -97,7 +97,8 @@ public class CompanyDaoTestSuite {
 
         List<Employee> employees = employeeDao.retrieveEmployeeByLastname("Clarckson");
         List<Company> companies = companyDao.retrieveCompanyStartingWith("Dat");
-        int employeeId = employees.get(0).getId();
+        Employee resultEmployee = employees.get(0);
+        Company resultCompany = companies.get(0);
 
         employees.stream()
                 .map(employee -> employee.getLastname())
@@ -109,13 +110,15 @@ public class CompanyDaoTestSuite {
         //Then
         Assert.assertEquals(1, employees.size());
         Assert.assertEquals(1, companies.size());
+        Assert.assertEquals(stephanieClarckson.getLastname(), resultEmployee.getLastname());
+        Assert.assertEquals(dataMaesters.getName(), resultCompany.getName());
 
         //CleanUp
         try {
             companyDao.deleteById(softwareMachineId);
             companyDao.deleteById(dataMaestersId);
             companyDao.deleteById(greyMatterId);
-            employeeDao.deleteById(employeeId);
+            employeeDao.deleteById(resultEmployee.getId());
         } catch (Exception e) {
             //do nothing
         }
