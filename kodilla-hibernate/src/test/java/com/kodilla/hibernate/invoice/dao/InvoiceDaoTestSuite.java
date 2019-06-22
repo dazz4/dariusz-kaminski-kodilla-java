@@ -49,9 +49,13 @@ public class InvoiceDaoTestSuite {
 
         //When
         invoiceDao.save(invoice);
+
+        int productId = product1.getId();
+        int productIdFromItem = item1.getProduct().getId();
         int id = invoice.getId();
 
         //Then
+        Assert.assertEquals(productId, productIdFromItem);
         Assert.assertNotEquals(0, id);
 
         //CleanUp
