@@ -10,7 +10,7 @@ import java.util.List;
 public class Invoice {
     private int id;
     private String number;
-    List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     public Invoice(String number) {
         this.number = number;
@@ -28,18 +28,10 @@ public class Invoice {
         return id;
     }
 
-    private void setId(int id) {
-        this.id = id;
-    }
-
     @NotNull
     @Column(name = "NUMBER")
     public String getNumber() {
         return number;
-    }
-
-    private void setNumber(String number) {
-        this.number = number;
     }
 
     @OneToMany(
@@ -52,7 +44,15 @@ public class Invoice {
         return items;
     }
 
-    public void setItems(List<Item> items) {
+    private void setNumber(String number) {
+        this.number = number;
+    }
+
+    private void setId(int id) {
+        this.id = id;
+    }
+
+    private void setItems(List<Item> items) {
         this.items = items;
     }
 }

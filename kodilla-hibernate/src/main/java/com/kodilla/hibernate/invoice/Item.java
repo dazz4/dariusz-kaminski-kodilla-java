@@ -55,10 +55,6 @@ public class Item {
         return product;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
     @ManyToOne
     @JoinColumn(name = "INVOICE_ID")
     public Invoice getInvoice() {
@@ -67,6 +63,10 @@ public class Item {
 
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     private void setId(int id) {
