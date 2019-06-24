@@ -58,10 +58,10 @@ public class InvoiceDaoTestSuite {
         Item itemToCheck = itemDao.findById(item1.getId());
 
         int productId = productToCheck.getId();
-        int itemId = itemToCheck.getProduct().getId();
+        int itemProductId = itemToCheck.getProduct().getId();
 
         //Then
-        Assert.assertEquals(productId, itemId);
+        Assert.assertEquals(productId, itemProductId);
 
         //CleanUp
         invoiceDao.deleteAll();
