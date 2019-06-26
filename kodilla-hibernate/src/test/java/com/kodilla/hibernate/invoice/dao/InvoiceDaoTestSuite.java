@@ -64,6 +64,5 @@ public class InvoiceDaoTestSuite {
         Assert.assertEquals(productId, itemProductId);
 
         //CleanUp
-        invoiceDao.deleteAll();
     }
 }
