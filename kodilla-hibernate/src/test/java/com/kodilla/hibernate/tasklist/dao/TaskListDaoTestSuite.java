@@ -17,12 +17,12 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskListDaoTestSuite {
+    private static final String LISTNAME = "To do";
+    private static final String DESCRIPTION = "Thins that i will have to do";
     @Autowired
     private TaskListDao taskListDao;
     @Autowired
     private TaskDao taskDao;
-    private static final String LISTNAME = "To do";
-    private static final String DESCRIPTION = "Thins that i will have to do";
 
     @Test
     public void testFindByListName() {

@@ -15,7 +15,7 @@ public class ForumStatistics {
         this.totalPosts = statistics.postsCount();
         this.totalComments = statistics.commentsCount();
 
-        if(totalPosts !=0 && totalComments != 0 && totalPosts > totalComments) {
+        if (totalPosts != 0 && totalComments != 0 && totalPosts > totalComments) {
             commentsPerPost = totalPosts / totalComments;
         } else {
             commentsPerPost = 0;

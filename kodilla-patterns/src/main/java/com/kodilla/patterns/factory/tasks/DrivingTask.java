@@ -24,9 +24,6 @@ public class DrivingTask implements Task {
 
     @Override
     public boolean isTaskExecuted() {
-        if(this.where == "No where to drive") {
-            return true;
-        }
-        return false;
+        return this.where == "No where to drive";
     }
 }

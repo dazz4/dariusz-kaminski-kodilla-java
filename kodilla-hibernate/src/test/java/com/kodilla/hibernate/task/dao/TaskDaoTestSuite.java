@@ -16,9 +16,9 @@ import java.util.Optional;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TaskDaoTestSuite {
+    private static final String DESCRIPTION = "Test: Learn Hibernate";
     @Autowired
     private TaskDao taskDao;
-    private static final String DESCRIPTION = "Test: Learn Hibernate";
 
     @Test
     public void testTaskDaoSave() {

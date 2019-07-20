@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import java.util.ArrayList;
 
 public class OddNumbersExterminator {
@@ -7,11 +8,11 @@ public class OddNumbersExterminator {
 
         ArrayList<Integer> temp = new ArrayList<>();
 
-        for(Integer i : numbers) {
-            if(i % 2 == 0) {
+        for (Integer i : numbers) {
+            if (i % 2 == 0) {
                 temp.add(i);
             }
-         }
+        }
 
         if (!temp.isEmpty()) {
             return temp;

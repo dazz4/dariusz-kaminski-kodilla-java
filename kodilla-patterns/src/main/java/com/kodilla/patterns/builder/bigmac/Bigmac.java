@@ -9,6 +9,29 @@ public class Bigmac {
     private final String sauce;
     private final List<String> ingredients;
 
+    public Bigmac(int burgers, String bun, String sauce, List<String> ingredients) {
+        this.burgers = burgers;
+        this.bun = bun;
+        this.sauce = sauce;
+        this.ingredients = ingredients;
+    }
+
+    public int getBurgers() {
+        return burgers;
+    }
+
+    public String getBun() {
+        return bun;
+    }
+
+    public String getSauce() {
+        return sauce;
+    }
+
+    public List<String> getIngredients() {
+        return ingredients;
+    }
+
     public static class BigmacBuilder {
         private int burgers;
         private String bun;
@@ -38,28 +61,5 @@ public class Bigmac {
         public Bigmac build() {
             return new Bigmac(burgers, bun, sauce, ingredients);
         }
-    }
-
-    public Bigmac(int burgers, String bun,  String sauce, List<String> ingredients) {
-        this.burgers = burgers;
-        this.bun = bun;
-        this.sauce = sauce;
-        this.ingredients = ingredients;
-    }
-
-    public int getBurgers() {
-        return burgers;
-    }
-
-    public String getBun() {
-        return bun;
-    }
-
-    public String getSauce() {
-        return sauce;
-    }
-
-    public List<String> getIngredients() {
-        return ingredients;
     }
 }

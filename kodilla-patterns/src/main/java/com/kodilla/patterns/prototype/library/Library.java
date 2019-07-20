@@ -13,12 +13,12 @@ public final class Library extends Prototype {
         this.name = name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Set<Book> getBooks() {
@@ -35,11 +35,11 @@ public final class Library extends Prototype {
     }
 
     public Library shallowCopy() throws CloneNotSupportedException {
-        return (Library)super.clone();
+        return (Library) super.clone();
     }
 
-    public Library deepCopy() throws CloneNotSupportedException{
-        Library clonedLibrary = (Library)super.clone();
+    public Library deepCopy() throws CloneNotSupportedException {
+        Library clonedLibrary = (Library) super.clone();
         clonedLibrary.books = new HashSet<>();
         for (Book book : books) {
             clonedLibrary.getBooks().add(book);

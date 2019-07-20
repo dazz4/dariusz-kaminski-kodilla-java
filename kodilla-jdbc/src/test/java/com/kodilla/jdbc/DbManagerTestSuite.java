@@ -1,10 +1,8 @@
 package com.kodilla.jdbc;
 
-import com.mysql.cj.xdevapi.SqlDataResult;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.swing.plaf.nimbus.State;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,6 +13,7 @@ public class DbManagerTestSuite {
         DbManager dbManager = DbManager.getInstance();
         Assert.assertNotNull(dbManager.getConnection());
     }
+
     @Test
     public void testSelectUsers() throws SQLException {
         //Given
@@ -39,7 +38,7 @@ public class DbManagerTestSuite {
     }
 
     @Test
-    public void testSelectUsersAndPosts() throws SQLException{
+    public void testSelectUsersAndPosts() throws SQLException {
         //Given
         DbManager dbManager = DbManager.getInstance();
         //When

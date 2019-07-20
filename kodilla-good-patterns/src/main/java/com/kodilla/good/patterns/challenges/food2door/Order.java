@@ -3,10 +3,10 @@ package com.kodilla.good.patterns.challenges.food2door;
 import java.util.HashSet;
 
 public class Order {
+    public HashSet<Product> listOfProducts;
     private int orderId;
     private User user;
     private Shop shop;
-    public HashSet<Product> listOfProducts;
 
     public Order(int orderId, User user, Shop shop, HashSet<Product> listOfProducts) {
         this.orderId = orderId;

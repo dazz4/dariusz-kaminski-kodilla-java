@@ -1,10 +1,9 @@
 package com.kodilla.patterns2.adapter.company.company;
 
 import com.kodilla.patterns2.adapter.company.oldhrsystem.Workers;
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class SalaryAdapterTestSuite {
     @Test

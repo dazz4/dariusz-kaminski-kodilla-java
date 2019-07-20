@@ -27,10 +27,18 @@ public class Product {
         return id;
     }
 
+    private void setId(int id) {
+        this.id = id;
+    }
+
     @NotNull
     @Column(name = "PRODUCT_NAME")
     public String getName() {
         return name;
+    }
+
+    private void setName(String name) {
+        this.name = name;
     }
 
     @OneToMany(
@@ -45,13 +53,5 @@ public class Product {
 
     private void setItems(List<Item> items) {
         this.items = items;
-    }
-
-    private void setId(int id) {
-        this.id = id;
-    }
-
-    private void setName(String name) {
-        this.name = name;
     }
 }

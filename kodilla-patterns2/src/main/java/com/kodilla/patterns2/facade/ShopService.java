@@ -19,7 +19,7 @@ public class ShopService {
 
     public Long openOrder(Long userId) {
         if (authenticator.isAuthenticated(userId)) {
-            Long maxOrder = (long)orders.stream()
+            Long maxOrder = (long) orders.stream()
                     .mapToInt(o -> o.getOrderId().intValue())
                     .max().orElse(0);
             orders.add(new Order(maxOrder + 1, userId, productService));
@@ -35,7 +35,7 @@ public class ShopService {
                 .forEach(order -> order.getItems().add(new Item(productId, qty)));
     }
 
-public boolean removeItem(Long orderId, Long productId) {
+    public boolean removeItem(Long orderId, Long productId) {
         Iterator<Order> orderIterator = orders.stream()
                 .filter(o -> o.getOrderId().equals(orderId))
                 .iterator();
@@ -84,7 +84,7 @@ public boolean removeItem(Long orderId, Long productId) {
         Iterator<Order> orderIterator = orders.stream()
                 .filter(o -> o.getOrderId().equals(orderId))
                 .iterator();
-        while(orderIterator.hasNext()) {
+        while (orderIterator.hasNext()) {
             Order theOrder = orderIterator.next();
             boolean result = theOrder.isPaid();
             Random generator = new Random();

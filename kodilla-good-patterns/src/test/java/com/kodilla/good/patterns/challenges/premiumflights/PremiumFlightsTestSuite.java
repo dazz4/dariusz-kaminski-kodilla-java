@@ -1,6 +1,7 @@
 package com.kodilla.good.patterns.challenges.premiumflights;
 
 import org.junit.Test;
+
 import java.time.LocalDate;
 
 public class PremiumFlightsTestSuite {

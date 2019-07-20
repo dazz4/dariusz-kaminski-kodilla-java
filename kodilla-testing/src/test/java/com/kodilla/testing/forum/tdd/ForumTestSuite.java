@@ -69,7 +69,7 @@ public class ForumTestSuite {
     }
 
     @Test
-    public void testGetComment(){
+    public void testGetComment() {
         //Given
         ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
         ForumPost thePost = new ForumPost("Hello everyone, " +

@@ -1,7 +1,6 @@
 package com.kodilla.exception.test;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Flight {
     String departureAirport;
@@ -20,7 +19,7 @@ public class Flight {
         return arrivalAirport;
     }
 
-    public void findFlight(Flight flight) throws RouteNotFoundException{
+    public void findFlight(Flight flight) throws RouteNotFoundException {
 
         HashMap<String, Boolean> flightMap = new HashMap<>();
 
@@ -29,7 +28,7 @@ public class Flight {
         flightMap.put("Gdansk", true);
         flightMap.put("Krakow", true);
 
-        if(flightMap.containsKey(flight.getArrivalAirport())) {
+        if (flightMap.containsKey(flight.getArrivalAirport())) {
 
             System.out.println("This airport exists on out system.");
 

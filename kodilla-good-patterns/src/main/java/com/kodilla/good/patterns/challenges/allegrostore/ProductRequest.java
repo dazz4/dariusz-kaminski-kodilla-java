@@ -11,7 +11,7 @@ public class ProductRequest {
     public ProductRequest(User user, Product product, LocalDate orderDate) {
         this.product = product;
         this.user = user;
-        this.orderDate  = orderDate;
+        this.orderDate = orderDate;
     }
 
     public Product getProduct() {

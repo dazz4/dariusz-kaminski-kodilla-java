@@ -55,9 +55,17 @@ public class Task {
         return id;
     }
 
+    private void setId(int id) {
+        this.id = id;
+    }
+
     @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
+    }
+
+    private void setDescription(String description) {
+        this.description = description;
     }
 
     @NotNull
@@ -66,9 +74,17 @@ public class Task {
         return created;
     }
 
+    private void setCreated(Date created) {
+        this.created = created;
+    }
+
     @Column(name = "DURATION")
     public int getDuration() {
         return duration;
+    }
+
+    private void setDuration(int duration) {
+        this.duration = duration;
     }
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -77,30 +93,14 @@ public class Task {
         return taskFinancialDetails;
     }
 
+    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
+        this.taskFinancialDetails = taskFinancialDetails;
+    }
+
     @ManyToOne
     @JoinColumn(name = "TASKLIST_ID")
     public TaskList getTaskList() {
         return taskList;
-    }
-
-    private void setId(int id) {
-        this.id = id;
-    }
-
-    private void setDescription(String description) {
-        this.description = description;
-    }
-
-    private void setCreated(Date created) {
-        this.created = created;
-    }
-
-    private void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
-        this.taskFinancialDetails = taskFinancialDetails;
     }
 
     public void setTaskList(TaskList taskList) {

@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.HashSet;
 
 public class GlutenFreeShop implements Shop {
-    private String shopName;
     public HashSet<Product> productsList = new HashSet<>();
+    private String shopName;
 
     public GlutenFreeShop(String shopName) {
         this.shopName = shopName;

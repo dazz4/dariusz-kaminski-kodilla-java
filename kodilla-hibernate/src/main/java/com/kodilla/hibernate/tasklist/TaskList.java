@@ -53,7 +53,7 @@ public class TaskList {
         this.description = description;
     }
 
-    @OneToMany (
+    @OneToMany(
             targetEntity = Task.class,
             mappedBy = "taskList",
             cascade = CascadeType.ALL,

@@ -1,8 +1,11 @@
 package com.kodilla.testing.collection;
-import com.kodilla.testing.collection.OddNumbersExterminator;
-import org.junit.*;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.ArrayList;
-import java.util.Random;
 
 public class CollectionTestSuite {
     @Before
@@ -48,6 +51,6 @@ public class CollectionTestSuite {
         ArrayList<Integer> result = ext.exterminate(oddAndEven);
 
         //Then
-        Assert.assertEquals(onlyEven, result );
+        Assert.assertEquals(onlyEven, result);
     }
 }

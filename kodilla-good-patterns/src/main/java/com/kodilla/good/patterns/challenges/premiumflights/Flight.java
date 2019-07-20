@@ -33,7 +33,7 @@ public final class Flight {
 
     @Override
     public String toString() {
-        if(through == null) {
+        if (through == null) {
             return "Flight " + from + " -> " + to + " (" + date + ")";
         } else {
             return "Flight " + from + " -> " + through + " -> " + to + " (" + date + ")";

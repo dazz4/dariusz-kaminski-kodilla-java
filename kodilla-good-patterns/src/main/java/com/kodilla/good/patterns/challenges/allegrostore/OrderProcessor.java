@@ -17,7 +17,7 @@ public class OrderProcessor {
     public OrderDTo process(final ProductRequest productRequest) {
         boolean isAvailable = productOrderService.orderProduct(productRequest.getUser(),
                 productRequest.getProduct(), productRequest.getOrderDate());
-        if(isAvailable) {
+        if (isAvailable) {
             informationService.orderConfirmation(productRequest.getUser());
             productOrderRepository.createOrder(productRequest.getUser(), productRequest.getProduct(), productRequest.getOrderDate());
             return new OrderDTo(productRequest.getUser(), true);

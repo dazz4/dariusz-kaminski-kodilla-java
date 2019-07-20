@@ -24,9 +24,6 @@ public class PaintingTask implements Task {
 
     @Override
     public boolean isTaskExecuted() {
-        if(this.whatToPaint == "Nothing to paint") {
-            return true;
-        }
-        return false;
+        return this.whatToPaint == "Nothing to paint";
     }
 }

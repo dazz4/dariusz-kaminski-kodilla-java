@@ -31,10 +31,18 @@ public class Item {
         return id;
     }
 
+    private void setId(int id) {
+        this.id = id;
+    }
+
     @NotNull
     @Column(name = "QUANTITY")
     public int getQuantity() {
         return quantity;
+    }
+
+    private void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @NotNull
@@ -43,16 +51,28 @@ public class Item {
         return price;
     }
 
+    private void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
     @NotNull
     @Column(name = "VALUE")
     public BigDecimal getValue() {
         return value;
     }
 
+    private void setValue(BigDecimal value) {
+        this.value = value;
+    }
+
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     @ManyToOne
@@ -63,25 +83,5 @@ public class Item {
 
     public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    private void setId(int id) {
-        this.id = id;
-    }
-
-    private void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    private void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-    private void setValue(BigDecimal value) {
-        this.value = value;
     }
 }

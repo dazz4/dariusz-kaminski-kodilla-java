@@ -12,9 +12,9 @@ import java.math.BigDecimal;
 @EnableAspectJAutoProxy
 @Service
 public class OrderFacade {
+    public static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
     @Autowired
     private ShopService shopService;
-    public static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
 
     public void processOrder(OrderDto order, Long userId)
             throws OrderProcessingException {

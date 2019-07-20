@@ -25,17 +25,17 @@ public class Food2Door {
         HashSet<Product> newOrder1 = new HashSet<>();
         newOrder1.add(product1);
         newOrder1.add(product4);
-        Order order = new Order(1, user, extraFoodShop, newOrder1 );
+        Order order = new Order(1, user, extraFoodShop, newOrder1);
         extraFoodShop.process(order);
 
         HashSet<Product> newOrder2 = new HashSet<>();
         newOrder2.add(product2);
-        Order order2 = new Order(2, user, healthyShop, newOrder2 );
+        Order order2 = new Order(2, user, healthyShop, newOrder2);
         healthyShop.process(order2);
 
         HashSet<Product> newOrder3 = new HashSet<>();
         newOrder3.add(product1);
-        Order order3 = new Order(3, user, glutenFreeShop, newOrder3 );
+        Order order3 = new Order(3, user, glutenFreeShop, newOrder3);
         glutenFreeShop.process(order3);
     }
 }

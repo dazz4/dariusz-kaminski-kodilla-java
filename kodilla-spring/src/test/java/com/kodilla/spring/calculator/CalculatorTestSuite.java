@@ -19,9 +19,9 @@ public class CalculatorTestSuite {
         Calculator calculator = context.getBean(Calculator.class);
         //When
         double result1 = calculator.add(2, 2);
-        double result2 =calculator.sub(4, 2);
-        double result3 =calculator.mul(2, 5);
-        double result4 =calculator.div(10, 5);
+        double result2 = calculator.sub(4, 2);
+        double result3 = calculator.mul(2, 5);
+        double result4 = calculator.div(10, 5);
         //Then
         Assert.assertEquals(4, result1, 0.01);
         Assert.assertEquals(2, result2, 0.01);

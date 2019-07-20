@@ -38,7 +38,7 @@ public class Watcher {
     }
 
     @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))" +
-    "&& args(order, id)")
+            "&& args(order, id)")
     public void logEvent(OrderDto order, Long id) {
         LOGGER.info("Logging the event for:" + " UserId:" + id + " Order: " + order.getClass().getName());
     }

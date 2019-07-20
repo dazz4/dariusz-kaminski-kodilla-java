@@ -30,7 +30,8 @@ public class ShopServiceTestSuite {
         order.addItem(new ItemDto(55L, 3));
         try {
             orderFacade.processOrder(order, 1L);
-        } catch (OrderProcessingException e) { }
+        } catch (OrderProcessingException e) {
+        }
     }
 
     @Test

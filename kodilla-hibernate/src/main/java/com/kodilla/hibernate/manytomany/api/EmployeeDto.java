@@ -1,6 +1,5 @@
 package com.kodilla.hibernate.manytomany.api;
 
-
 import com.kodilla.hibernate.manytomany.Company;
 
 import java.util.ArrayList;

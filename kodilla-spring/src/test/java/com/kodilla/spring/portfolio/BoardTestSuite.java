@@ -27,15 +27,15 @@ public class BoardTestSuite {
         board.doneList.tasks.add("taskDone2");
 
         board.toDoList.tasks.stream()
-                .map(s -> s.toString())
+                .map(s -> s)
                 .forEach(System.out::println);
 
         board.inProgressList.tasks.stream()
-                .map(s -> s.toString())
+                .map(s -> s)
                 .forEach(System.out::println);
 
         board.doneList.tasks.stream()
-                .map(s -> s.toString())
+                .map(s -> s)
                 .forEach(System.out::println);
     }
 }

@@ -28,10 +28,18 @@ public class Invoice {
         return id;
     }
 
+    private void setId(int id) {
+        this.id = id;
+    }
+
     @NotNull
     @Column(name = "NUMBER")
     public String getNumber() {
         return number;
+    }
+
+    private void setNumber(String number) {
+        this.number = number;
     }
 
     @OneToMany(
@@ -42,14 +50,6 @@ public class Invoice {
     )
     public List<Item> getItems() {
         return items;
-    }
-
-    private void setNumber(String number) {
-        this.number = number;
-    }
-
-    private void setId(int id) {
-        this.id = id;
     }
 
     private void setItems(List<Item> items) {

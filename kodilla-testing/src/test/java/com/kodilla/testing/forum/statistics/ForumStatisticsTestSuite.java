@@ -1,4 +1,5 @@
 package com.kodilla.testing.forum.statistics;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -35,9 +36,9 @@ public class ForumStatisticsTestSuite {
         int averageCommentsPerPost = forumStatistics.getCommentsPerPost();
 
         //Then
-        Assert.assertEquals(200, averagePostsPerUser );
-        Assert.assertEquals(20, averageCommentsPerUser );
-        Assert.assertEquals(10, averageCommentsPerPost );
+        Assert.assertEquals(200, averagePostsPerUser);
+        Assert.assertEquals(20, averageCommentsPerUser);
+        Assert.assertEquals(10, averageCommentsPerPost);
     }
 
     @Test
@@ -62,9 +63,9 @@ public class ForumStatisticsTestSuite {
         int averageCommentsPerPost = forumStatistics.getCommentsPerPost();
 
         //Then
-        Assert.assertEquals(0, averagePostsPerUser );
-        Assert.assertEquals(0, averageCommentsPerUser );
-        Assert.assertEquals(0, averageCommentsPerPost );
+        Assert.assertEquals(0, averagePostsPerUser);
+        Assert.assertEquals(0, averageCommentsPerUser);
+        Assert.assertEquals(0, averageCommentsPerPost);
     }
 
 }
