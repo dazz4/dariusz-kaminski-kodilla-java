@@ -4,14 +4,17 @@ import com.kodilla.hibernate.manytomany.Company;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
-@Transactional
-@Repository
+@Component
 public interface CompanyDao extends CrudRepository<Company, Integer> {
     @Query
     List<Company> retrieveCompanyStartingWith(@Param("FIRSTTHREE") String firstthree);
+
+    @Query
+    List<Company> retrieveCompanyByPartName(@Param("NAME") String name);
 }
