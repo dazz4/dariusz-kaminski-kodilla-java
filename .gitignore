@@ -33,3 +33,5 @@ HELP.md
 **/build/
 **/classes/
 /classes/
+/kodilla-testing/build
+kodilla-testing/build
